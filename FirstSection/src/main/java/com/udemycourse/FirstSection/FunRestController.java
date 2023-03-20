@@ -10,7 +10,7 @@ public class FunRestController {
     private Coach workout;
 
     @Autowired
-    private FunRestController(@Qualifier("footballCoach") Coach workout){
+    private FunRestController(@Qualifier("InjectingBeanId") Coach workout){
         this.workout = workout;
     }
 
