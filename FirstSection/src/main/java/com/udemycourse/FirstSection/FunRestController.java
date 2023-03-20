@@ -1,6 +1,7 @@
 package com.udemycourse.FirstSection;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -9,7 +10,7 @@ public class FunRestController {
     private Coach workout;
 
     @Autowired
-    private FunRestController(Coach workout){
+    private FunRestController(@Qualifier("footballCoach") Coach workout){
         this.workout = workout;
     }
 
